@@ -1,0 +1,10 @@
+pipeline:
+  build:
+    image: go:1.19
+    group: build
+    commands:
+      - make build
+
+depends_on:
+  - lint
+  - test

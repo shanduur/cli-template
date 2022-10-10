@@ -1,0 +1,15 @@
+pipeline:
+  test:
+    image: rust:1.64.0
+    group: test
+    commands:
+      - make test
+
+  rustsec:
+    image: rust:1.64.0
+    group: test
+    commands:
+      - make rustsec
+
+depends_on:
+  - lint

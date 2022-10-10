@@ -1,0 +1,9 @@
+build/
+vm/
+docs/
+.github/
+.woodpecker/
+
+*.md
+*.yaml
+*.yml

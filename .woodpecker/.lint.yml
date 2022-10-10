@@ -1,0 +1,6 @@
+pipeline:
+  lint:
+    image: go:1.19
+    group: lint
+    commands:
+      - make lint

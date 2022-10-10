@@ -1,0 +1,10 @@
+pipeline:
+  docker:
+    image: docker # here custom image is needed
+    group: build
+    commands:
+      - make docker-push
+
+depends_on:
+  - lint
+  - test

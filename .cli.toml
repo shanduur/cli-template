@@ -1,0 +1,28 @@
+# `log_level` defines how verbose should the logging system be.
+#
+# Possible values:
+#   - "trace"
+#   - "debug"
+#   - "info" - default
+#   - "warn"
+#   - "error"
+#   - "fatal"
+#   - "panic"
+#   - "disabled"
+log_level = "trace"
+
+# `log_timestamp_formta` defines format of timestamp attached to every message.
+#
+# Possible values:
+#   - "UNIX" - default
+#   - "UNIXMICRO"
+#   - "UNIXNANO"
+#   - "UNIXMS"
+#   - "RFC3339"
+#   - "RFC3339Nano"
+#   - "RFC1123"
+#   - "RFC1123Z"
+#   - "RFC822"
+#   - "RFC822Z"
+#   - "RFC850"
+log_timestamp_formt = "UNIX"
