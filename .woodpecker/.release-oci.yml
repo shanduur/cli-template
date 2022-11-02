@@ -1,10 +1,10 @@
 pipeline:
-  build:
+  docker:
     image: earthly/earthly:v0.6.28
     group: build
     privileged: true
     commands:
-      - earthly +build-all
+      - earthly --push +image
 
 depends_on:
   - lint

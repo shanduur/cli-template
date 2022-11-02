@@ -1,15 +1,10 @@
 pipeline:
   test:
-    image: rust:1.64.0
+    image: earthly/earthly:v0.6.28
     group: test
+    privileged: true
     commands:
-      - make test
-
-  rustsec:
-    image: rust:1.64.0
-    group: test
-    commands:
-      - make rustsec
+      - earthly +test +codecov --CODECOV_TOKEN=${CODECOV_TOKEN}
 
 depends_on:
   - lint

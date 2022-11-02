@@ -1,6 +1,7 @@
 pipeline:
   lint:
-    image: go:1.19
+    image: earthly/earthly:v0.6.28
     group: lint
+    privileged: true
     commands:
-      - make lint
+      - earthly +lint
