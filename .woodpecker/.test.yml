@@ -2,9 +2,11 @@ pipeline:
   test:
     image: earthly/earthly:v0.6.28
     group: test
-    privileged: true
     commands:
-      - earthly +test +codecov --CODECOV_TOKEN=${CODECOV_TOKEN}
+      - earthly --ci +test
+      - earthly --ci +codecov --CODECOV_TOKEN=${CODECOV_TOKEN}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
 depends_on:
   - lint

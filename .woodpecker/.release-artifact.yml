@@ -2,9 +2,10 @@ pipeline:
   build:
     image: earthly/earthly:v0.6.28
     group: build
-    privileged: true
     commands:
-      - earthly +build-all
+      - earthly --ci +build-all
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
 depends_on:
   - lint
